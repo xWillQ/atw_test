@@ -2,9 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
-    protected $hidden = ['position_id', 'created_at', 'updated_at'];
+    use HasApiTokens;
+
+    protected $hidden = ['position_id', 'adopted_at', 'created_at', 'updated_at', 'password'];
+
+    protected $fillable = ['name', 'email', 'type', 'github', 'city', 'phone', 'birthday', 'password'];
 }
