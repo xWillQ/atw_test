@@ -14,12 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::get('/v1/departments', 'DepartmentsController@getDepartments');
+    Route::get('/v1/workers', 'WorkersController@getWorkerCards');
+    Route::get('/v1/workers/{id}', 'WorkersController@getWorkerById');
 });
-
-Route::get('/v1/departments', 'DepartmentsController@getDepartments');
-Route::get('/v1/workers', 'WorkersController@getWorkerCards');
-Route::get('/v1/workers/{id}', 'WorkersController@getWorkerById');
 Route::post('/v1/auth/register', 'AuthController@register');
 Route::post('/v1/auth/login', 'AuthController@login');
