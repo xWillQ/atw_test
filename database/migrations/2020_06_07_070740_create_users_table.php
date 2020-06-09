@@ -18,12 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('login')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->unique();
+            $table->boolean('email_confirmed')->default(false);
             $table->string('image')->nullable();
             $table->string('about')->nullable();
             $table->string('type')->nullable();
             $table->string('github')->nullable();
             $table->string('city')->nullable();
-            $table->boolean('is_finished')->default(0);
+            $table->boolean('is_finished')->default(false);
             $table->string('phone')->nullable();
             $table->date('birthday')->nullable();
             $table->unsignedBigInteger('position_id')->nullable();
