@@ -23,3 +23,5 @@ Route::middleware('auth:api')->group(function () {
 });
 Route::post('/v1/auth/register', 'AuthController@register');
 Route::post('/v1/auth/login', 'AuthController@login');
+Route::post('/v1/auth/restore', 'AuthController@restorePass');
+Route::post('/v1/auth/restore/confirm', 'AuthController@confirmPassRestore');

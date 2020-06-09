@@ -4,29 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\RestoreConfirmRequest;
+use App\Http\Requests\RestorePasswordRequest;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
-    private function generatePassword($length = 8)
-    {
-        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        $count = mb_strlen($chars);
-
-        for ($i = 0, $result = ''; $i < $length; $i++) {
-            $index = rand(0, $count - 1);
-            $result .= mb_substr($chars, $index, 1);
-        }
-
-        return $result;
-    }
-
     public function register(RegisterRequest $req)
     {
         // TODO: Добавить обработку ошибок
         $input = $req->all();
-        $input['password'] = $this->generatePassword();
+        $input['password'] = Str::random(8);
 
         try {
             $user = User::create($input);
@@ -59,5 +51,43 @@ class AuthController extends Controller
                 'password' => $input['password']
             ];
         }
+    }
+
+    public function restorePass(RestorePasswordRequest $req)
+    {
+        $user = User::where('email', $req->email)->first();
+
+        if ($user == null) {
+            return response('Пользователь с такой почтой не существует', 500, ['content-type' => 'application/json']);
+        }
+
+        $token = Str::random(60);
+
+        DB::table('password_resets')->insert([
+            'email' => $req->email,
+            'token' => $token,
+            'created_at' => Carbon::now()
+        ]);
+
+        return response('Запрос был отправлен', 201, ['content-type' => 'application/json']);
+    }
+
+    public function confirmPassRestore(RestoreConfirmRequest $req)
+    {
+        $tokenData = DB::table('password_resets')->where('token', $req->token)->first();
+
+        if ($tokenData == null) {
+            return response('Пользователь с таким токеном не найден', 404, ['content-type' => 'application/json']);
+        }
+
+        $user = User::where('email', $tokenData->email)->first();
+
+        $user->password = $req->password;
+        $user->update();
+
+        DB::table('password_resets')->where('email', $user->email)
+            ->delete();
+
+        return response('Пользователь успешно сменил пароль', 201, ['content-type' => 'application/json']);
     }
 }
