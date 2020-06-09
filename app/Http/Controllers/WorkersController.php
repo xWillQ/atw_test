@@ -20,7 +20,8 @@ class WorkersController extends Controller
         $pos = $req->query('position_id');
 
 
-        $query = UserCard::join('positions', 'users.position_id', '=', 'positions.id')
+        $query = UserCard::where('role', 'worker')->orWhere('role', 'admin')
+            ->join('positions', 'users.position_id', '=', 'positions.id')
             ->select('users.*', 'positions.department_id');
 
         if ($user->role == 'worker') {
@@ -45,12 +46,12 @@ class WorkersController extends Controller
     {
         $user = $req->user();
 
-        $query = User::query();
+        $query = User::where('role', 'worker')->orWhere('role', 'admin');
 
         if ($user->role == 'worker') {
             $user_dep_id = Position::find($user->position_id)->department_id;
             $query = $query->join('positions', 'users.position_id', '=', 'positions.id')
-            ->select('users.*', 'positions.department_id')->where('department_id', $user_dep_id);
+                ->select('users.*', 'positions.department_id')->where('department_id', $user_dep_id);
         }
 
         $worker = $query->where('users.id', $id)->first();
