@@ -1,6 +1,8 @@
 <?php
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -20,7 +22,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2018-08-04 04:48:50',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 104,
@@ -32,7 +35,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2019-01-18 04:48:50',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 105,
@@ -44,7 +48,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-04-20 04:48:51',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 106,
@@ -56,7 +61,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2015-12-19 04:48:51',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 107,
@@ -68,7 +74,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2016-09-06 04:48:51',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 108,
@@ -80,7 +87,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2015-01-21 04:48:52',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 109,
@@ -92,7 +100,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-05-01 04:48:52',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 110,
@@ -104,7 +113,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2018-07-26 04:48:52',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 111,
@@ -116,7 +126,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 1,
             'adopted_at' => '2016-10-23 04:48:52',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 112,
@@ -128,7 +139,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2018-08-02 04:48:53',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 113,
@@ -140,7 +152,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2018-04-28 04:48:53',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 114,
@@ -152,7 +165,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2019-02-06 04:48:53',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 115,
@@ -164,7 +178,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2016-04-22 04:48:54',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 116,
@@ -176,7 +191,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2019-01-09 04:48:54',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 117,
@@ -188,7 +204,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2015-10-12 04:48:54',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 118,
@@ -200,7 +217,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2013-10-08 04:48:55',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 119,
@@ -212,7 +230,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2017-10-17 04:48:55',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 120,
@@ -224,7 +243,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2017-12-31 04:48:55',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 121,
@@ -236,7 +256,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2018-04-12 04:48:55',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 122,
@@ -248,7 +269,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-12-19 04:48:56',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 123,
@@ -260,7 +282,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 3,
             'adopted_at' => '2015-01-26 04:48:56',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 124,
@@ -272,7 +295,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2018-05-08 04:48:56',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 125,
@@ -284,7 +308,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2018-03-22 04:48:57',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 126,
@@ -296,7 +321,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2015-11-02 04:48:57',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 127,
@@ -308,7 +334,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2014-10-05 04:48:57',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 128,
@@ -320,7 +347,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 1,
             'adopted_at' => '2018-03-28 04:48:57',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 129,
@@ -332,7 +360,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2013-11-21 04:48:58',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 130,
@@ -344,7 +373,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-03-18 04:48:58',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 131,
@@ -356,7 +386,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-03-26 04:48:58',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 132,
@@ -368,7 +399,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-03-25 04:48:59',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 133,
@@ -380,7 +412,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2017-09-09 04:48:59',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 134,
@@ -392,7 +425,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2018-11-06 04:48:59',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 135,
@@ -404,7 +438,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-07-01 04:48:59',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 136,
@@ -416,7 +451,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2014-09-13 04:49:00',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 137,
@@ -428,7 +464,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2015-12-11 04:49:00',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 138,
@@ -440,7 +477,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-04-23 04:49:00',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 139,
@@ -452,7 +490,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2015-01-25 04:49:01',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 140,
@@ -464,7 +503,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-12-25 04:49:01',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 141,
@@ -476,7 +516,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-10-15 04:49:01',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 142,
@@ -488,7 +529,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2013-09-06 04:49:02',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 143,
@@ -500,7 +542,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2016-08-22 04:49:02',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 144,
@@ -512,7 +555,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2016-04-22 04:49:02',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 145,
@@ -524,7 +568,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2017-04-21 04:49:02',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 146,
@@ -536,7 +581,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2013-07-25 04:49:03',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 147,
@@ -548,7 +594,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2015-05-05 04:49:03',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 148,
@@ -560,7 +607,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2014-12-23 04:49:03',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 149,
@@ -572,7 +620,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2013-09-21 04:49:04',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 150,
@@ -584,7 +633,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2014-08-02 04:49:04',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 151,
@@ -596,7 +646,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2017-12-09 04:49:04',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 152,
@@ -608,7 +659,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2015-08-05 04:49:05',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 153,
@@ -620,7 +672,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2013-07-28 04:49:05',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 154,
@@ -632,7 +685,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2018-04-02 04:49:05',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 155,
@@ -644,7 +698,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2017-08-29 04:49:06',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 156,
@@ -656,7 +711,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2017-06-21 04:49:06',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 157,
@@ -668,7 +724,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2017-12-12 04:49:06',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 158,
@@ -680,7 +737,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2017-12-03 04:49:06',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 159,
@@ -692,7 +750,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-04-04 04:49:07',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 160,
@@ -704,7 +763,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2017-08-04 04:49:07',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 161,
@@ -716,7 +776,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 3,
             'adopted_at' => '2014-09-23 04:49:07',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 162,
@@ -728,7 +789,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2015-06-22 04:49:08',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 163,
@@ -740,7 +802,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2017-11-17 04:49:08',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 164,
@@ -752,7 +815,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2015-04-20 04:49:08',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 165,
@@ -764,7 +828,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-12-22 04:49:09',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 166,
@@ -776,7 +841,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2018-06-29 04:49:09',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 167,
@@ -788,7 +854,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2016-02-02 04:49:09',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 168,
@@ -800,7 +867,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-09-26 04:49:09',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 169,
@@ -812,7 +880,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2016-02-03 04:49:10',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 170,
@@ -824,7 +893,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2015-09-27 04:49:10',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 171,
@@ -836,7 +906,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2013-06-03 04:49:11',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 172,
@@ -848,7 +919,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2014-06-15 04:49:11',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 173,
@@ -860,7 +932,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 1,
             'adopted_at' => '2016-02-04 04:49:11',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 174,
@@ -872,7 +945,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2014-02-27 04:49:11',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 175,
@@ -884,7 +958,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2016-04-15 04:49:12',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 176,
@@ -896,7 +971,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2017-07-17 04:49:12',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 177,
@@ -908,7 +984,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 1,
             'adopted_at' => '2017-01-21 04:49:12',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 178,
@@ -920,7 +997,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 1,
             'adopted_at' => '2017-04-01 04:49:13',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 179,
@@ -932,7 +1010,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2017-01-13 04:49:13',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 180,
@@ -944,7 +1023,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2018-11-20 04:49:13',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 181,
@@ -956,7 +1036,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2018-04-14 04:49:13',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 182,
@@ -968,7 +1049,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2014-07-11 04:49:14',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 183,
@@ -980,7 +1062,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 4,
             'adopted_at' => '2014-01-10 04:49:14',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 184,
@@ -992,7 +1075,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2019-04-18 04:49:14',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 185,
@@ -1004,7 +1088,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2014-11-21 04:49:15',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 186,
@@ -1016,7 +1101,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2017-07-17 04:49:15',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 187,
@@ -1028,7 +1114,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2016-09-15 04:49:15',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 188,
@@ -1040,7 +1127,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2016-01-27 04:49:16',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 189,
@@ -1052,7 +1140,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2017-06-26 04:49:16',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 190,
@@ -1064,7 +1153,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2018-05-08 04:49:16',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 191,
@@ -1076,7 +1166,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2016-10-13 04:49:16',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 192,
@@ -1088,7 +1179,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 6,
             'adopted_at' => '2017-04-21 04:49:17',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 193,
@@ -1100,7 +1192,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2013-09-12 04:49:17',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 194,
@@ -1112,7 +1205,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2015-01-09 04:49:17',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 195,
@@ -1124,7 +1218,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 8,
             'adopted_at' => '2015-10-23 04:49:18',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 196,
@@ -1136,7 +1231,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 2,
             'adopted_at' => '2016-12-19 04:49:18',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 197,
@@ -1148,7 +1244,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2016-11-20 04:49:18',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 198,
@@ -1160,7 +1257,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2017-09-18 04:49:19',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 199,
@@ -1172,7 +1270,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2019-02-11 04:49:19',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 200,
@@ -1184,7 +1283,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2014-01-01 04:49:19',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 201,
@@ -1196,7 +1296,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 5,
             'adopted_at' => '2017-11-13 04:49:20',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
         DB::table('users')->insert([
             'id' => 202,
@@ -1208,7 +1309,8 @@ class UserSeeder extends Seeder
             'is_finished' => 0,
             'position_id' => 7,
             'adopted_at' => '2017-12-03 04:49:20',
-            'password' => 'password'
+            'password' => 'password',
+            'role' => 'worker'
         ]);
     }
 }
