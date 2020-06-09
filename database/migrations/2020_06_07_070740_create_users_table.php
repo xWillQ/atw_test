@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('position_id')->nullable();
             $table->foreign('position_id')->references('id')->on('positions');
             $table->dateTime('adopted_at')->nullable();
+            $table->string('telegram')->nullable();
             $table->timestamps();
         });
     }
