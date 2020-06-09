@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,7 @@ class AuthController extends Controller
         return $result;
     }
 
-    public function register(Request $req)
+    public function register(RegisterRequest $req)
     {
         // TODO: Добавить обработку ошибок
         $input = $req->all();
@@ -41,7 +43,7 @@ class AuthController extends Controller
         ];
     }
 
-    public function login(Request $req)
+    public function login(LoginRequest $req)
     {
         // TODO: Добавить обработку ошибок
         $input = $req->all();
