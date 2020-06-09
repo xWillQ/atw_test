@@ -37,20 +37,22 @@ class AuthController extends Controller
 
     public function login(LoginRequest $req)
     {
-        // TODO: Добавить обработку ошибок
         $input = $req->all();
         $user = User::where('email', $input['email'])->where('password', $input['password'])->first();
 
         if ($user == null) {
             return response('Ошибка в заполнении данных', 408, ['content-type' => 'application/json']);
-        } else {
-            $token = $user->createToken('MyApp')->accessToken;
-            return [
-                'token' => $token,
-                'user' => $user,
-                'password' => $input['password']
-            ];
         }
+        if ($user->email_confirmed == false) {
+            return response('Пользователь не подтвердил почту', 406, ['content-type' => 'application/json']);
+        }
+
+        $token = $user->createToken('MyApp')->accessToken;
+        return [
+            'token' => $token,
+            'user' => $user,
+            'password' => $input['password']
+        ];
     }
 
     public function restorePass(RestorePasswordRequest $req)
