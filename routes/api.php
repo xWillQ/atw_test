@@ -18,6 +18,8 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/v1/departments', 'DepartmentsController@getDepartments');
     Route::get('/v1/workers', 'WorkersController@getWorkerCards');
     Route::get('/v1/workers/{id}', 'WorkersController@getWorkerById');
+    Route::get('/v1/user', 'UserController@getUser');
+    Route::post('/v1/user', 'UserController@updateUser');
 });
 Route::post('/v1/auth/register', 'AuthController@register');
 Route::post('/v1/auth/login', 'AuthController@login');
