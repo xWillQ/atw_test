@@ -16,7 +16,15 @@ class AuthController extends Controller
 {
     public function register(RegisterRequest $req)
     {
-        // TODO: Добавить обработку ошибок
+        $time_hour_ago = Carbon::now()->subHour();
+
+        $MAX_REGISTERED_PER_HOUR = 5;
+        $registered_in_last_hour = User::where('created_at', '>', $time_hour_ago->toDateTimeString())->count();
+
+        if ($registered_in_last_hour >= $MAX_REGISTERED_PER_HOUR) {
+            return response('Слишком много пользователей было зарегистрированно за последний час', 408, ['content-type' => 'application/json']);
+        }
+
         $input = $req->all();
         $input['password'] = Str::random(8);
 
