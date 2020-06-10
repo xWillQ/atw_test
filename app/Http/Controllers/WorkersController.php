@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\WorkersRequest;
 use App\Http\Resources\UserWorkerRes;
 use App\Models\Position;
+use App\Models\Role;
 use App\Models\User;
 use App\Models\UserCard;
 use Illuminate\Http\Request;
@@ -20,11 +21,15 @@ class WorkersController extends Controller
         $pos = $req->query('position_id');
 
 
-        $query = UserCard::where('role', 'worker')->orWhere('role', 'admin')
-            ->join('positions', 'users.position_id', '=', 'positions.id')
-            ->select('users.*', 'positions.department_id');
+        $query = UserCard::join('roles', 'users.role_id', '=', 'roles.id') // Получаем названия ролей
+            ->where(function ($query) { // Выбираем только пользователей с ролью 'admin' или 'worker'
+                $query->where('roles.name', 'worker')
+                    ->orWhere('roles.name', 'admin');
+            })
+            ->join('positions', 'users.position_id', '=', 'positions.id') // Получаем id отделов
+            ->select('users.*', 'department_id'); // Выбираем все столбцы из таблицы пользователей и столбец с id отделов
 
-        if ($user->role == 'worker') {
+        if ($user->role->name == 'worker') {
             $user_dep_id = Position::find($user->position_id)->department_id;
             $query = $query->where('department_id', $user_dep_id);
         }
@@ -46,20 +51,19 @@ class WorkersController extends Controller
     {
         $user = $req->user();
 
-        $query = User::where('role', 'worker')->orWhere('role', 'admin');
+        $worker = User::find($id);
 
-        if ($user->role == 'worker') {
-            $user_dep_id = Position::find($user->position_id)->department_id;
-            $query = $query->join('positions', 'users.position_id', '=', 'positions.id')
-                ->select('users.*', 'positions.department_id')->where('department_id', $user_dep_id);
-        }
-
-        $worker = $query->where('users.id', $id)->first();
-
-        if ($worker != null) {
-            return new UserWorkerRes($worker);
-        } else {
+        if ($worker == null) {
             return response('User doesn\'t exist', 500);
         }
+
+        if (
+            $user->role->name == 'worker' &&
+            $worker->position->department->name != $user->position->department->name
+        ) {
+            return response('You don\'t have permission to view this user\'s data', 500);
+        }
+
+        return new UserWorkerRes($worker);
     }
 }

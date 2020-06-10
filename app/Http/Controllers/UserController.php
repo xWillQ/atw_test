@@ -15,6 +15,7 @@ class UserController extends Controller
         $input = $req->all();
         $user = $req->user();
         $input['name'] = $input['show_name'];
+        $input['avatar'] = $input['image'];
         $user->fill($input)->save();
         return $user;
     }

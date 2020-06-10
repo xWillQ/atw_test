@@ -13,7 +13,7 @@ class WorkersRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->role == 'worker' || $this->user()->role == 'admin';
+        return $this->user()->role->name == 'worker' || $this->user()->role->name == 'admin';
     }
 
     /**

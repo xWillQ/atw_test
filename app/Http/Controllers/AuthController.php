@@ -19,7 +19,7 @@ class AuthController extends Controller
     {
         $time_hour_ago = Carbon::now()->subHour();
 
-        $MAX_REGISTERED_PER_HOUR = 5;
+        $MAX_REGISTERED_PER_HOUR = 10;
         $registered_in_last_hour = User::where('created_at', '>', $time_hour_ago->toDateTimeString())->count();
 
         if ($registered_in_last_hour >= $MAX_REGISTERED_PER_HOUR) {
@@ -52,7 +52,7 @@ class AuthController extends Controller
         if ($user == null) {
             return response('Ошибка в заполнении данных', 408, ['content-type' => 'application/json']);
         }
-        if ($user->email_confirmed == false) {
+        if ($user->email_verified == false) {
             return response('Пользователь не подтвердил почту', 406, ['content-type' => 'application/json']);
         }
 
