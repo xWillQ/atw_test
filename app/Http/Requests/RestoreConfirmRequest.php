@@ -25,7 +25,7 @@ class RestoreConfirmRequest extends FormRequest
     {
         return [
             'token' => 'required|string',
-            'password' => 'required',
+            'password' => 'required|min:6',
             'password_confirmation' => 'required|same:password'
         ];
     }
