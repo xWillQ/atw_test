@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $fillable = ['name', 'email', 'type', 'github', 'city', 'phone', 'birthday', 'password'];
 
     public function role() {
-        return $this->belongsTo('App\Models\Role');
+        return $this->belongsTo('TCG\Voyager\Models\Role');
     }
 
     public function position() {
