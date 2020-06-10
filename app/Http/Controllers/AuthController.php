@@ -11,6 +11,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class AuthController extends Controller
@@ -27,7 +28,9 @@ class AuthController extends Controller
         }
 
         $input = $req->all();
-        $input['password'] = Str::random(8);
+
+        $password = Str::random(8);
+        $input['password'] = Hash::make($password);
 
         try {
             $user = User::create($input);
@@ -40,16 +43,17 @@ class AuthController extends Controller
             'token' => $token,
             // Пользователь достаётся из бд т.к. $user содержит не все поля (часть полей заполняются стандартными значениями)
             'user' => new UserRes(User::find($user->id)),
-            'password' => $input['password']
+            'password' => $password
         ];
     }
 
     public function login(LoginRequest $req)
     {
         $input = $req->all();
-        $user = User::where('email', $input['email'])->where('password', $input['password'])->first();
+        $user = User::where('email', $input['email'])->first();
 
-        if ($user == null) {
+
+        if ($user == null || !Hash::check($input['password'], $user->password)) {
             return response('Ошибка в заполнении данных', 408, ['content-type' => 'application/json']);
         }
         if ($user->email_verified == false) {
@@ -93,7 +97,7 @@ class AuthController extends Controller
 
         $user = User::where('email', $tokenData->email)->first();
 
-        $user->password = $req->password;
+        $user->password = Hash::make($req->password);
         $user->update();
 
         DB::table('password_resets')->where('email', $user->email)
