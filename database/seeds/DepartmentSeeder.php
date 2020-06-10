@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\Department;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class DepartmentSeeder extends Seeder
 {
@@ -12,19 +12,19 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('departments')->insert([
+        Department::create([
             'id' => 1,
             'name' => 'Отдел разработки'
         ]);
-        DB::table('departments')->insert([
+        Department::create([
             'id' => 2,
             'name' => 'Отдел продаж'
         ]);
-        DB::table('departments')->insert([
+        Department::create([
             'id' => 3,
             'name' => 'Отдел управления проектами'
         ]);
-        DB::table('departments')->insert([
+        Department::create([
             'id' => 4,
             'name' => 'Отдел продвижения'
         ]);

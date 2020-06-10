@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        User::create([
             'id' => 103,
             'login' => 'Jennyfer_1472',
             'name' => 'Майя Владимировна Григорьева',
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 104,
             'login' => 'Coty_1147',
             'name' => 'Александров Валерий Иванович',
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 105,
             'login' => 'Giles_601',
             'name' => 'Георгий Львович Гуляев',
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 106,
             'login' => 'Rosalind_1742',
             'name' => 'Альбина Владимировна Шилова',
@@ -65,7 +65,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 107,
             'login' => 'Arjun_953',
             'name' => 'Большаков Аким Львович',
@@ -78,7 +78,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 108,
             'login' => 'Ashly_1183',
             'name' => 'Лидия Сергеевна Дьячкова',
@@ -91,7 +91,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 109,
             'login' => 'Jolie_563',
             'name' => 'Изольда Дмитриевна Сергеева',
@@ -104,7 +104,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 110,
             'login' => 'Thea_311',
             'name' => 'Елисеева Светлана Алексеевна',
@@ -117,7 +117,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 111,
             'login' => 'Evelyn_1741',
             'name' => 'Полина Романовна Анисимова',
@@ -130,7 +130,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 112,
             'login' => 'Marc_1352',
             'name' => 'Никодим Фёдорович Анисимов',
@@ -143,7 +143,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 113,
             'login' => 'Chaz_535',
             'name' => 'Евгений Романович Устинов',
@@ -156,7 +156,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 114,
             'login' => 'Euna_548',
             'name' => 'Панфилова Елизавета Андреевна',
@@ -169,7 +169,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 115,
             'login' => 'Lonzo_1518',
             'name' => 'Лев Сергеевич Дьячков',
@@ -182,7 +182,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 116,
             'login' => 'Lyda_979',
             'name' => 'Маргарита Максимовна Харитонова',
@@ -195,7 +195,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 117,
             'login' => 'Mariam_1495',
             'name' => 'Зайцева Ксения Владимировна',
@@ -208,7 +208,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 118,
             'login' => 'Myron_1752',
             'name' => 'Фомин Антон Владимирович',
@@ -221,7 +221,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 119,
             'login' => 'Orpha_1517',
             'name' => 'Комарова Лариса Фёдоровна',
@@ -234,7 +234,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 120,
             'login' => 'Amber_1603',
             'name' => 'Оксана Ивановна Носова',
@@ -247,7 +247,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 121,
             'login' => 'Clair_12',
             'name' => 'Логинов Павел Андреевич',
@@ -260,7 +260,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 122,
             'login' => 'Adriana_1717',
             'name' => 'Клара Дмитриевна Морозова',
@@ -273,7 +273,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 123,
             'login' => 'Jaunita_1756',
             'name' => 'Попова Ульяна Максимовна',
@@ -286,7 +286,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 124,
             'login' => 'Jocelyn_822',
             'name' => 'Большаков Аркадий Владимирович',
@@ -299,7 +299,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 125,
             'login' => 'Wanda_1055',
             'name' => 'Жанна Александровна Третьякова',
@@ -312,7 +312,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 126,
             'login' => 'Danial_319',
             'name' => 'Филиппов Фёдор Евгеньевич',
@@ -325,7 +325,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 127,
             'login' => 'Emelia_1457',
             'name' => 'Артемьева Софья Ивановна',
@@ -338,7 +338,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 128,
             'login' => 'Tiana_185',
             'name' => 'Вероника Евгеньевна Ермакова',
@@ -351,7 +351,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 129,
             'login' => 'Erin_1408',
             'name' => 'Лыткин Донат Фёдорович',
@@ -364,7 +364,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 130,
             'login' => 'Henderson_1754',
             'name' => 'Рогов Игорь Максимович',
@@ -377,7 +377,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 131,
             'login' => 'Elmo_143',
             'name' => 'Корнилов Трофим Дмитриевич',
@@ -390,7 +390,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 132,
             'login' => 'Carmine_1034',
             'name' => 'Аполлон Романович Блинов',
@@ -403,7 +403,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 133,
             'login' => 'Arely_455',
             'name' => 'Дементьев Тарас Андреевич',
@@ -416,7 +416,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 134,
             'login' => 'Gianni_670',
             'name' => 'Павлов Геннадий Максимович',
@@ -429,7 +429,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 135,
             'login' => 'Brennan_1237',
             'name' => 'Рыбаков Олег Максимович',
@@ -442,7 +442,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 136,
             'login' => 'Fiona_724',
             'name' => 'Дарья Ивановна Беспалова',
@@ -455,7 +455,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 137,
             'login' => 'Christine_147',
             'name' => 'Ника Фёдоровна Ильина',
@@ -468,7 +468,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 138,
             'login' => 'Christine_1965',
             'name' => 'Ермакова Вероника Максимовна',
@@ -481,7 +481,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 139,
             'login' => 'Daisha_824',
             'name' => 'Лада Ивановна Кулагина',
@@ -494,7 +494,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 140,
             'login' => 'Jackie_294',
             'name' => 'Фомичёва Нонна Борисовна',
@@ -507,7 +507,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 141,
             'login' => 'Kariane_1313',
             'name' => 'Наталья Львовна Романова',
@@ -520,7 +520,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 142,
             'login' => 'Andreane_333',
             'name' => 'Марина Владимировна Попова',
@@ -533,7 +533,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 143,
             'login' => 'Delphine_1600',
             'name' => 'Клавдия Дмитриевна Аксёнова',
@@ -546,7 +546,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 144,
             'login' => 'Aniya_226',
             'name' => 'Яковлева Алла Дмитриевна',
@@ -559,7 +559,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 145,
             'login' => 'Orrin_284',
             'name' => 'Валентин Иванович Русаков',
@@ -572,7 +572,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 146,
             'login' => 'Abagail_227',
             'name' => 'Валерия Фёдоровна Наумова',
@@ -585,7 +585,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 147,
             'login' => 'Mercedes_1874',
             'name' => 'Ярослава Максимовна Силина',
@@ -598,7 +598,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 148,
             'login' => 'Ryleigh_509',
             'name' => 'Алексей Владимирович Потапов',
@@ -611,7 +611,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 149,
             'login' => 'Myrtis_17',
             'name' => 'Регина Романовна Ширяева',
@@ -624,7 +624,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 150,
             'login' => 'Vince_1150',
             'name' => 'Тарасов Адам Борисович',
@@ -637,7 +637,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 151,
             'login' => 'Ettie_528',
             'name' => 'Яна Борисовна Орлова',
@@ -650,7 +650,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 152,
             'login' => 'Maxie_1707',
             'name' => 'Инга Максимовна Суханова',
@@ -663,7 +663,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 153,
             'login' => 'Brandt_1895',
             'name' => 'Панфилов Алексей Львович',
@@ -676,7 +676,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 154,
             'login' => 'Shawna_754',
             'name' => 'Александрова Алёна Львовна',
@@ -689,7 +689,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 155,
             'login' => 'Jazmin_781',
             'name' => 'Альбина Андреевна Князева',
@@ -702,7 +702,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 156,
             'login' => 'Clair_769',
             'name' => 'Макар Александрович Кузьмин',
@@ -715,7 +715,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 157,
             'login' => 'Mckayla_1224',
             'name' => 'Маркова Любовь Романовна',
@@ -728,7 +728,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 158,
             'login' => 'Candice_683',
             'name' => 'Ксения Максимовна Лаврентьева',
@@ -741,7 +741,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 159,
             'login' => 'Bradley_981',
             'name' => 'Крюков Клим Сергеевич',
@@ -754,7 +754,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 160,
             'login' => 'Otto_526',
             'name' => 'Денисов Святослав Дмитриевич',
@@ -767,7 +767,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 161,
             'login' => 'Nyah_389',
             'name' => 'Никонова Владлена Александровна',
@@ -780,7 +780,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 162,
             'login' => 'Yoshiko_1962',
             'name' => 'Олеся Дмитриевна Кондратьева',
@@ -793,7 +793,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 163,
             'login' => 'Elinor_1786',
             'name' => 'Ксения Владимировна Шашкова',
@@ -806,7 +806,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 164,
             'login' => 'Otilia_981',
             'name' => 'Борисова Алина Владимировна',
@@ -819,7 +819,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 165,
             'login' => 'Thomas_331',
             'name' => 'Ростислав Иванович Герасимов',
@@ -832,7 +832,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 166,
             'login' => 'America_1983',
             'name' => 'Селиверстова Майя Борисовна',
@@ -845,7 +845,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 167,
             'login' => 'Kennedi_847',
             'name' => 'Бронислав Иванович Васильев',
@@ -858,7 +858,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 168,
             'login' => 'Tito_1772',
             'name' => 'Стефан Алексеевич Селиверстов',
@@ -871,7 +871,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 169,
             'login' => 'Mallory_1932',
             'name' => 'Моисеев Аким Евгеньевич',
@@ -884,7 +884,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 170,
             'login' => 'Candice_776',
             'name' => 'Эмилия Владимировна Горшкова',
@@ -897,7 +897,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 171,
             'login' => 'Juwan_247',
             'name' => 'Давид Владимирович Колобов',
@@ -910,7 +910,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 172,
             'login' => 'Dena_600',
             'name' => 'Татьяна Дмитриевна Дементьева',
@@ -923,7 +923,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 173,
             'login' => 'Morton_1732',
             'name' => 'Роберт Сергеевич Медведев',
@@ -936,7 +936,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 174,
             'login' => 'Alfreda_954',
             'name' => 'Носова Лилия Романовна',
@@ -949,7 +949,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 175,
             'login' => 'Malinda_65',
             'name' => 'Евгения Алексеевна Никифорова',
@@ -962,7 +962,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 176,
             'login' => 'Cortney_649',
             'name' => 'Зайцева Эмма Львовна',
@@ -975,7 +975,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 177,
             'login' => 'Joelle_53',
             'name' => 'Регина Борисовна Михеева',
@@ -988,7 +988,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 178,
             'login' => 'Garret_1348',
             'name' => 'Семён Иванович Кононов',
@@ -1001,7 +1001,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 179,
             'login' => 'Emmitt_738',
             'name' => 'Георгий Максимович Дьячков',
@@ -1014,7 +1014,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 180,
             'login' => 'Twila_1113',
             'name' => 'Корнилова Нонна Дмитриевна',
@@ -1027,7 +1027,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 181,
             'login' => 'Charity_421',
             'name' => 'Алина Романовна Филатова',
@@ -1040,7 +1040,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 182,
             'login' => 'Hilton_1566',
             'name' => 'Спартак Александрович Шарапов',
@@ -1053,7 +1053,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 183,
             'login' => 'Marc_1330',
             'name' => 'Лазарев Артур Романович',
@@ -1066,7 +1066,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 184,
             'login' => 'Kiera_1385',
             'name' => 'Валерия Владимировна Агафонова',
@@ -1079,7 +1079,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 185,
             'login' => 'Kenton_730',
             'name' => 'Аполлон Евгеньевич Князев',
@@ -1092,7 +1092,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 186,
             'login' => 'Kip_1353',
             'name' => 'Веселов Артём Андреевич',
@@ -1105,7 +1105,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 187,
             'login' => 'Mauricio_226',
             'name' => 'Васильев Степан Андреевич',
@@ -1118,7 +1118,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 188,
             'login' => 'Berneice_1601',
             'name' => 'Субботина Вероника Алексеевна',
@@ -1131,7 +1131,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 189,
             'login' => 'Brisa_953',
             'name' => 'Лаврентьева Флорентина Андреевна',
@@ -1144,7 +1144,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 190,
             'login' => 'Bailee_20',
             'name' => 'Субботина Лилия Сергеевна',
@@ -1157,7 +1157,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 191,
             'login' => 'Jedediah_804',
             'name' => 'Яковлев Адриан Владимирович',
@@ -1170,7 +1170,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 192,
             'login' => 'Margarett_710',
             'name' => 'Архипова София Максимовна',
@@ -1183,7 +1183,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 193,
             'login' => 'Kip_316',
             'name' => 'Козлов Геннадий Александрович',
@@ -1196,7 +1196,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 194,
             'login' => 'Kraig_9',
             'name' => 'Анатолий Дмитриевич Носков',
@@ -1209,7 +1209,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 195,
             'login' => 'Betty_613',
             'name' => 'Эмма Львовна Шестакова',
@@ -1222,7 +1222,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 196,
             'login' => 'Jany_1930',
             'name' => 'Симонова Люся Владимировна',
@@ -1235,7 +1235,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 197,
             'login' => 'Donny_1804',
             'name' => 'Борисов Николай Сергеевич',
@@ -1248,7 +1248,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 198,
             'login' => 'Josephine_1079',
             'name' => 'Людмила Евгеньевна Блинова',
@@ -1261,7 +1261,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 199,
             'login' => 'Charlie_767',
             'name' => 'Самойлов Захар Владимирович',
@@ -1274,7 +1274,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 200,
             'login' => 'Braulio_407',
             'name' => 'Суханов Андрей Сергеевич',
@@ -1287,7 +1287,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 201,
             'login' => 'Chanelle_942',
             'name' => 'Хохлова Антонина Андреевна',
@@ -1300,7 +1300,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('password'),
             'role_id' => 2
         ]);
-        DB::table('users')->insert([
+        User::create([
             'id' => 202,
             'login' => 'Christop_570',
             'name' => 'Самойлов Витольд Алексеевич',
