@@ -16,10 +16,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('login')->nullable();
-            $table->string('name')->nullable();
             $table->string('email')->unique();
-            $table->boolean('email_confirmed')->default(false);
-            $table->string('image')->nullable();
+            $table->string('password');
+            $table->string('name')->nullable();
+            $table->boolean('email_verified_at')->default(false);
             $table->string('about')->nullable();
             $table->string('type')->nullable();
             $table->string('github')->nullable();
@@ -27,10 +27,11 @@ class CreateUsersTable extends Migration
             $table->boolean('is_finished')->default(false);
             $table->string('phone')->nullable();
             $table->date('birthday')->nullable();
-            $table->unsignedBigInteger('position_id')->nullable();
-            $table->foreign('position_id')->references('id')->on('positions');
+            $table->foreignId('position_id')->nullable();
             $table->dateTime('adopted_at')->nullable();
             $table->string('telegram')->nullable();
+
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }
