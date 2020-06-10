@@ -68,7 +68,7 @@ class AuthController extends Controller
         $user = User::where('email', $req->email)->first();
 
         if ($user == null) {
-            return response('Пользователь с такой почтой не существует', 500, ['content-type' => 'application/json']);
+            return response('Пользователь с такой почтой не существует', 404, ['content-type' => 'application/json']);
         }
 
         $token = Str::random(60);
