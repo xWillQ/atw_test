@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('name')->nullable();
-            $table->boolean('email_verified_at')->default(false);
+            $table->boolean('email_verified')->default(false);
             $table->string('about')->nullable();
             $table->string('type')->nullable();
             $table->string('github')->nullable();
