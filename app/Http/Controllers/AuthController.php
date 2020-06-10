@@ -38,7 +38,7 @@ class AuthController extends Controller
         return [
             'token' => $token,
             // Пользователь достаётся из бд т.к. $user содержит не все поля (часть полей заполняются стандартными значениями)
-            'user' => User::find($user->id),
+            'user' => new UserRes(User::find($user->id)),
             'password' => $input['password']
         ];
     }
@@ -58,7 +58,7 @@ class AuthController extends Controller
         $token = $user->createToken('MyApp')->accessToken;
         return [
             'token' => $token,
-            'user' => $user,
+            'user' => new UserRes($user),
             'password' => $input['password']
         ];
     }
