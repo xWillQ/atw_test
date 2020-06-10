@@ -19,7 +19,7 @@ class UserRes extends JsonResource
             'login' => $this->login,
             'name' => $this->name,
             'email' => $this->email,
-            'image' => $this->image,
+            'image' => $this->avatar,
             'about' => $this->about,
             'type' => $this->type,
             'github' => $this->github,

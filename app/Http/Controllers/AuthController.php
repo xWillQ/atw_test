@@ -6,6 +6,7 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\RestoreConfirmRequest;
 use App\Http\Requests\RestorePasswordRequest;
+use App\Http\Resources\UserRes;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
