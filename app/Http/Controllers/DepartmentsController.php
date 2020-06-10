@@ -12,14 +12,14 @@ class DepartmentsController extends Controller
 {
     public function getDepartments(Request $req) {
         $user = $req->user();
-        if ($user->role == 'user') {
+        if ($user->role->name == 'user') {
             return DepartmentRes::collection(Department::all());
         }
-        if ($user->role == 'worker') {
+        if ($user->role->name == 'worker') {
             $dep_id = Position::find($user->position_id)->department_id;
             return DepartmentWithPositionsRes::collection([Department::find($dep_id)]);
         }
-        if ($user->role == 'admin') {
+        if ($user->role->name == 'admin') {
             return DepartmentWithPositionsRes::collection(Department::all());
         }
     }
