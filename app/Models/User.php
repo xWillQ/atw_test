@@ -9,7 +9,15 @@ class User extends Authenticatable
 {
     use HasApiTokens;
 
-    protected $hidden = ['position_id', 'adopted_at', 'created_at', 'updated_at', 'password', 'telegram', 'role', 'email_verified_at'];
+    protected $hidden = ['position_id', 'adopted_at', 'created_at', 'updated_at', 'password', 'telegram', 'role_id', 'email_verified'];
 
     protected $fillable = ['name', 'email', 'type', 'github', 'city', 'phone', 'birthday', 'password'];
+
+    public function role() {
+        return $this->belongsTo('App\Models\Role');
+    }
+
+    public function position() {
+        return $this->belongsTo('App\Models\Position');
+    }
 }
