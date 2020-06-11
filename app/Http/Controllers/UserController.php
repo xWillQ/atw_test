@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateUserRequest;
+use App\Http\Resources\UserRes;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function getUser(Request $req) {
-        return $req->user();
+        return new UserRes($req->user());
     }
 
     public function updateUser(UpdateUserRequest $req) {
@@ -17,6 +18,6 @@ class UserController extends Controller
         $input['name'] = $input['show_name'];
         $input['avatar'] = $input['image'];
         $user->fill($input)->save();
-        return $user;
+        return new UserRes($user);
     }
 }
