@@ -27,7 +27,11 @@ class WorkersController extends Controller
             ->select('users.*', 'department_id'); // Выбираем все столбцы из таблицы пользователей и столбец с id отделов
 
         if ($user->role->name == 'worker') {
-            $query = $query->where('department_id', $user->position->department);
+            $dep_id = 0;
+            if ($user->position != null) {
+                $dep_id = $user->position->department->id;
+            }
+            $query = $query->where('department_id', $dep_id);
         }
 
         if ($name != null) {
@@ -54,8 +58,9 @@ class WorkersController extends Controller
         }
 
         if (
-            $user->role->name == 'worker' &&
-            $worker->position->department->id != $user->position->department->id
+            $user->role->name != 'admin' &&
+            ($user->position == null || $worker->position == null ||
+                $worker->position->department->id != $user->position->department->id)
         ) {
             return response('You don\'t have permission to view this user\'s data', 500);
         }
